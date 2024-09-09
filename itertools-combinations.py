@@ -8,7 +8,15 @@ n = int(inp[1])
 
 for j in range(1, n+1):
     pList = list((combinations(string, j)))
-    rList = ["".join(i) for i in pList]
+
+    sortList = []
+    for k in pList:
+        x = list(k)
+        x.sort()
+        sortList.append(x)
+
+
+    rList = ["".join(i) for i in sortList]
     rList.sort()
     for i in rList:
         print(i)
